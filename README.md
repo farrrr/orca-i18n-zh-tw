@@ -3,7 +3,7 @@
 [Orca](https://github.com/stablyai/orca) 的第三方 `zh-TW` UI 語言包外掛。
 以術語表治理、CI 驗證、與上游定期同步。
 
-> **狀態：已對齊 Orca v1.4.176（110/110 批，涵蓋 11,967/11,969 條）、驗證通過（錯誤 0、警告 755 為棘輪化的規則債）** — v0.2.0 已發佈。
+> **狀態：已對齊 Orca v1.4.177（111/111 批，涵蓋 12,030/12,032 條）、驗證通過（錯誤 0、警告 755 為棘輪化的規則債）** — v0.2.1 已發佈。
 
 ## 為什麼需要這個外掛
 
@@ -24,13 +24,13 @@ Orca 內建語系為 `en` / `zh` / `ko` / `ja` / `es`，**沒有 zh-TW**。
 
 | 項目 | 數量 |
 |---|---|
-| 上游 `en.json` 字串總數（v1.4.176） | 12,183 |
+| 上游 `en.json` 字串總數（v1.4.177） | 12,246 |
 | 平台保護、不可翻譯（`auto.components.settings.Plugin*`） | −214 |
 | source-identical（3 條純 CSS + 20 條 CLI 指令，寫入 en 原值不翻譯） | −23 |
-| **本語言包待翻譯** | **11,946** |
+| **本語言包待翻譯** | **12,009** |
 
 受保護條目在 Orca 中會回退為英文（屬預期行為）；source-identical 條目則直接寫入英文原值——
-CSS 與 CLI 指令翻譯後會失效或無法執行。發佈產物仍涵蓋 11,969 條。
+CSS 與 CLI 指令翻譯後會失效或無法執行。發佈產物仍涵蓋 12,032 條。
 
 ## 目錄結構
 
@@ -66,18 +66,17 @@ docs/
 
 | 區塊 | 詞數 | 影響字串 |
 |---|---|---|
-| `confirmed`（硬約束） | 330 | — |
-| `contextual`（provisional／disputed，軟約束） | 462 | — |
+| `confirmed`（硬約束） | 371 | — |
+| `contextual`（provisional／disputed，軟約束） | 423 | — |
 | `ruleCovered`（由 style-guide 通則涵蓋） | 45 | 2,336 |
 | `phraseConsistency`（非術語，轉一致性檢查） | 39 | 48 |
 | `pending` | 0 | — |
 
 831 個分歧詞已全數納管，`pending` 為 0——翻譯 session 不會遇到無規範可循的詞。
-其中 168 個詞附有例外 key 枚舉（共 204 條 key），標示該詞在特定畫面的不同語意。
+其中 187 個詞附有例外 key 枚舉（共 224 條 key），標示該詞在特定畫面的不同語意。
 
-`contextual` 中有 **13 個**高影響一詞多義詞標記 `needsContextReview`
-（`open` / `review` / `active` / `link` / `source` / `view` / `preview` /
-`ready` / `base` / `key` / `cursor` / `installed` / `enter`）——
+歷經 R1–R4 裁決輪後，僅餘 **3 個**高影響一詞多義詞仍標記 `needsContextReview`
+（`review` / `preview` / `duplicate`）——
 正確譯法取決於實際 UI 呈現，翻譯時**必須連同完整上下文回報**後才定案。
 
 其餘 `contextual` 詞條已有建議 `default`，翻譯時遵循即可，有異議則回報，

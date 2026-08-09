@@ -431,7 +431,24 @@
                   "b41fbc180c": "GitLab 顯示此 MR 可以 merge，但部分流水線作業失敗",
                   "d63bb6f76e": "此 merge request 仍是草稿",
                   "ee482a2bad": "此 merge request 已合併",
-                  "fae95ae20d": "合併"
+                  "fae95ae20d": "合併",
+                  "01ab632a21": "未解決的討論串",
+                  "049ea91a82": "流水線仍在執行中",
+                  "195917574e": "檢查中",
+                  "2c61100b3a": "在 merge 前更新分支",
+                  "37d8637c70": "在此 MR 可以 merge 之前，GitLab 要求流水線必須成功",
+                  "382c70faeb": "落後",
+                  "4191fdfcec": "在 merge 之前，GitLab 要求先解決未解決的討論",
+                  "46dc85711b": "在此 MR 可以 merge 之前，GitLab 需要核准",
+                  "4ecc0d90ee": "已封鎖",
+                  "5105b0e584": "需要核准",
+                  "804ecf93e8": "GitLab 尚未回報最終的 merge 狀態",
+                  "893a999c8c": "已請求更改",
+                  "a0f3de7023": "GitLab 回報此 merge request 已被封鎖",
+                  "a5c049afe4": "GitLab 顯示此 MR 可以 merge",
+                  "bf628700f6": "檢查必須通過",
+                  "c65408a99d": "有審查者對此 merge request 請求更改",
+                  "ff6db2db63": "GitLab 仍在計算此 merge request 的狀態"
                 }
               }
             }
@@ -624,7 +641,16 @@
                     "chip": {
                       "52c366d88d": "刪除 {{value0}} 行",
                       "8a9b97b666": "新增 {{value0}} 行",
-                      "daa8e8e59b": "新增 {{value0}} 行，刪除 {{value1}} 行"
+                      "daa8e8e59b": "新增 {{value0}} 行，刪除 {{value1}} 行",
+                      "3d7e9b1042": "非自動產生",
+                      "4c1f70ba92": "{{value0}} — 測試程式碼：新增 {{value1}} 行，刪除 {{value2}} 行",
+                      "6b2d0f14a7": "測試",
+                      "7a04c6f8b3": "自動產生",
+                      "7f3e1a9c24": "{{value0}} — 自動產生：新增 {{value1}} 行，刪除 {{value2}} 行",
+                      "9e4a3c5081": "非測試",
+                      "a1b2c3d4e5": "程式碼組成",
+                      "b2c3d4e5f6": "程式碼行數",
+                      "c8d5b21e07": "原始碼"
                     }
                   }
                 }
@@ -3932,7 +3958,8 @@
           "c47127f222": "WSL default",
           "f00d6aa9b5": "WSL 在此電腦上無法使用。",
           "fc0fcf72fd": "請先註冊 WSL Shell 命令，再進行技能設定。",
-          "windowsPathUnknown": "無法檢查 WSL Shell 命令的 PATH"
+          "windowsPathUnknown": "無法檢查 WSL Shell 命令的 PATH",
+          "refreshCliRegistration": "請重新整理 CLI 註冊狀態後再試一次。"
         },
         "CloudVmSetupGuide": {
           "createWorkspace": "建立工作區，並在「執行位置」下選擇該配方。",
@@ -6944,7 +6971,12 @@
             "runtime_online": "已連線",
             "runtime_reconnect_attempt": "第 {{value0}} 次嘗試",
             "runtime_reconnecting": "重新連線中",
-            "runtime_unavailable": "已斷開"
+            "runtime_unavailable": "已斷開",
+            "connectedHostCount_one": "{{count}} 台主機",
+            "connectedHostCount_other": "{{count}} 台主機",
+            "connecting": "正在連線…",
+            "workspaceConflict": "工作區衝突",
+            "workspaceSyncError": "工作區同步錯誤"
           },
           "SshTargetStatusRow": {
             "sshHost": "SSH 主機"
@@ -7007,7 +7039,8 @@
             "ff0fbe9311": "目前",
             "grokUsageAria": "開啟 Grok 用量詳情",
             "grokUsageMenu": "Grok 用量",
-            "remoteServerLabel": "遠端伺服器"
+            "remoteServerLabel": "遠端伺服器",
+            "floatingTerminalNewActivity": "{{label}}，有新活動"
           },
           "StatusBarUsageEmptyCta": {
             "828c764a79": "連線帳戶",
@@ -7165,6 +7198,21 @@
                 "rssDescription": "常駐記憶體集大小（RSS）加總。共用或別名的分頁可能出現在多個行程中。",
                 "workingSetDescription": "工作集（WS）加總。共用分頁可能出現在多個行程中。"
               }
+            },
+            "manager": {
+              "terminal": {
+                "copy": {
+                  "ariaLabel": "資源管理器，{{sessions}}",
+                  "ariaLabelWithSpaceScan": "資源管理器，{{sessions}}，{{spaceScan}}",
+                  "memoryUnavailable": "記憶體資訊無法使用",
+                  "noTerminalSessions": "尚無終端機工作階段。",
+                  "sessionsGroupedByWorkspace": "終端機工作階段依工作區分組。",
+                  "spaceScanReady": "空間掃描已就緒",
+                  "terminalSessionCount_one": "{{count}} 個終端機工作階段",
+                  "terminalSessionCount_other": "{{count}} 個終端機工作階段",
+                  "tooltipSummary": "資源管理器 - {{memory}} - {{sessions}}"
+                }
+              }
             }
           },
           "tooltip": {
@@ -7320,7 +7368,8 @@
           "custom-option": "{{address}}（自訂）",
           "trigger-label": "要公佈的網路地址",
           "custom-section": "自訂",
-          "remove-custom": "移除 {{address}}"
+          "remove-custom": "移除 {{address}}",
+          "no-address-selected": "未選擇位址"
         },
         "PhoneCarousel": {
           "89c7713645": "Orca Mobile 首頁螢幕",
@@ -7755,12 +7804,10 @@
       "WorktreeJumpPalette": {
         "088d66d980": "操作與設定",
         "1628fd7dfa": "沒有使用中的 worktree、設定、操作，或已開啟的分頁",
-        "1ebe225fee": "搜尋 worktree、設定、分頁與操作...",
         "20af998bff": "{{value0}} 個可用項目{{value1}}",
         "2c38630a01": "工作區已不存在",
         "34c8fbb46e": "SSH 遠端",
         "45def60329": "開啟",
-        "4e4ff044d5": "搜尋 worktree、設定、分頁與操作",
         "4ee378034d": "跳轉到...",
         "50a1d11d5b": "已開啟的分頁",
         "52404f8096": "使用中的分頁",
@@ -7793,7 +7840,10 @@
         "repoGroupBadge": "儲存庫組",
         "settingsBadge": "設定",
         "workspaceTabMissing": "分頁已不存在",
-        "worktreesHeader": "Worktrees"
+        "worktreesHeader": "Worktrees",
+        "2770f02910": "搜尋聊天、終端機、worktree、設定與操作",
+        "27f10cca63": "搜尋聊天、終端機、worktree、設定與操作...",
+        "recentChatsTerminalsHeader": "最近的聊天與終端機"
       },
       "feature": {
         "wall": {
@@ -12449,10 +12499,15 @@
           },
           "TabBarCreateEntry": {
             "25dc1cd653": "開啟檔案",
-            "39676a184c": "開啟任何檔案、URL、代理程式，...",
             "7cdf8ee0c8": "開啟 URL",
             "b27864279e": "啟動代理程式",
-            "d62d63b807": "建立檔案"
+            "d62d63b807": "建立檔案",
+            "0e5b7a3f16": "搜尋已開啟的分頁、檔案、URL、代理程式…",
+            "2c38630a01": "工作區已不存在",
+            "4f0d9a71c2": "分頁已不存在",
+            "7726ce9970": "手機模擬器分頁已不存在",
+            "8f0a1c4d92": "切換至分頁",
+            "d7d496a451": "瀏覽器頁面已不存在"
           },
           "TabBarQuickCommandsButton": {
             "15529ede69": "編輯 {{value0}}",
@@ -12500,10 +12555,10 @@
                   "097a982ee0": "正在載入檔案...",
                   "42e6262ae9": "沒有可用的操作。",
                   "5553b283ce": "請輸入 URL 或檔案路徑。",
-                  "5a9c83c04b": "開啟任何檔案、URL、代理程式，...",
                   "90eb94dc48": "請輸入 http:// 或 https:// 的 URL。",
                   "absolutePathRemoteBlocked": "絕對路徑需要本機工作區。",
-                  "queryTooLarge": "搜尋文字過長。"
+                  "queryTooLarge": "搜尋文字過長。",
+                  "c41f8d20b7": "搜尋已開啟的分頁、檔案、URL、代理程式…"
                 }
               },
               "menu": {
@@ -12679,7 +12734,8 @@
             "fc9be38f6f": "為頁面元素新增註解",
             "fdfc7fe0ef": "抓取頁面元素",
             "a1f3c2e4b5": "強制重新載入",
-            "b7e4d9c1a2": "停止"
+            "b7e4d9c1a2": "停止",
+            "b71dc3d930": "重新連線"
           },
           "BrowserToolbarMenu": {
             "2293adf620": "匯入 Cookie",
@@ -13587,6 +13643,12 @@
         "passingChip": "{{value0}} 個通過",
         "pendingChip": "{{value0}} 個待處理",
         "unresolvedChip": "{{value0}} 個未解決"
+      },
+      "BrowserPane": {
+        "streamCapabilityUnsupported": "所選的執行時不支援遠端瀏覽器串流。",
+        "streamConnectionLost": "與遠端伺服器的連線已中斷。",
+        "streamConnectionUnreachable": "無法連線至遠端伺服器。",
+        "streamRestartFailed": "無法重新啟動遠端瀏覽器串流。"
       }
     },
     "runtime": {
@@ -13672,7 +13734,8 @@
               "79371593b0": "Orca CLI 尚未出現在 PATH 中",
               "8d6eedf97e": "無法在 PATH 中註冊 Orca CLI。",
               "e99d7dc36f": "Orca CLI 註冊需要處理",
-              "windowsPathUnknown": "Orca 無法檢查你的 Windows 使用者 PATH"
+              "windowsPathUnknown": "Orca 無法檢查你的 Windows 使用者 PATH",
+              "refreshCliRegistration": "請重新整理 CLI 註冊狀態後再試一次。"
             }
           }
         }
@@ -13999,6 +14062,9 @@
             "9ccec2316b": "議題",
             "ca40ffcbec": "PR"
           }
+        },
+        "activation": {
+          "cannotOpenFolderWorkspace": "無法開啟資料夾工作區"
         }
       }
     },
@@ -14351,7 +14417,7 @@
           "78e08cd877": "Git 無法安全刪除分支「{{value0}}」，因此 Orca 保留了該分支，以免遺失本機提交。",
           "81f13f48d2": "刪除 Worktree「{{value1}}」後，Git 無法安全刪除分支「{{value0}}」，因此 Orca 保留了該分支，以免遺失本機提交。",
           "889487d8bb": "關閉",
-          "903b51c2ed": "從 {{value0}} 建立工作區，但 Orca 無法快進本機 {{value1}}，因為 {{value2}}",
+          "903b51c2ed": "工作區建立自 {{value0}}，但 Orca 無法快進本機 {{value1}}。{{value2}}",
           "d1d78a7baa": "Git 無法安全刪除分支「{{value0}}」{{value1}}，因此 Orca 保留了該分支，以免遺失本機提交。",
           "e50495aae6": "強制刪除分支",
           "f4503ca505": "開啟「設定」>「Git」並重試。",
@@ -14359,7 +14425,13 @@
           "runtimeScopeForbiddenDescription": "行動裝置權限範圍的配對連線無法使用工作區。請透過「設定 → 執行環境 → 共享此 Orca 伺服器」中的瀏覽器存取連結重新連線。",
           "runtimeScopeForbiddenTitle": "此連線具有受限（行動裝置）存取權限",
           "a17f4d2e93": "無法更新此工作區。",
-          "c6cf133786": "此工作區已不再可用。"
+          "c6cf133786": "此工作區已不再可用。",
+          "localBaseRefRefreshFailedDescriptionNamed": "工作區「{{value0}}」建立自 {{value1}}，但 Orca 無法快進本機 {{value2}}。{{value3}}",
+          "localBaseRefRefreshFailedDetailDirty": "簽出本機 {{value0}} 的 worktree 有未提交的更改。請 commit、stash 或捨棄這些更改，然後手動更新本機 {{value0}}。",
+          "localBaseRefRefreshFailedDetailDirtyNamed": "位於 {{value0}} 的 worktree（其中簽出了本機 {{value1}}）有未提交的更改。請 commit、stash 或捨棄這些更改，然後手動更新本機 {{value1}}。",
+          "localBaseRefRefreshFailedDetailError": "Git 在更新本機 {{value0}} 時傳回錯誤。請檢查儲存庫是否有鎖定的 ref 或不尋常的 worktree 狀態，然後手動更新本機 {{value0}}。",
+          "localBaseRefRefreshFailedDetailNotFastForward": "本機 {{value0}} 不存在，或無法從遠端基底分支乾淨地快進。手動更新前，請先檢查是否有僅存在於本機的提交。",
+          "localBaseRefRefreshFailedForWorktree": "本機 {{value0}} 未針對「{{value1}}」重新整理"
         },
         "runtime": {
           "status": {
@@ -14648,7 +14720,8 @@
         "agentlessWorkspaces": "沒有代理程式的工作區",
         "canvasSummary": "已顯示 {{total}} 個代理程式中的 {{shown}} 個",
         "showStates": "代理程式狀態",
-        "workspaceVisibility": "地圖內容"
+        "workspaceVisibility": "地圖內容",
+        "orchestrationLinks": "編排連結"
       },
       "fit": "縮放至符合",
       "host": {
