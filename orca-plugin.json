@@ -3,7 +3,7 @@
   "id": "i18n-zh-tw",
   "publisher": "farrrr",
   "name": "繁體中文（台灣）",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "Traditional Chinese (Taiwan) translations for the full Orca interface.",
   "repository": "https://github.com/farrrr/orca-i18n-zh-tw",
   "engines": { "orca": ">=1.4.0" },
